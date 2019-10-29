@@ -2,8 +2,8 @@
 
 #ifndef SONG_H
 #define SONG_H
-#include "Song.h"
 #include <string>
+#include <iostream>
 using namespace std;
 
 //Song class declaration
@@ -15,7 +15,7 @@ private:
 public:
     Song();
     Song(string name);
-    Song(string name, string artist, int size);
+    Song(string artist, string name, int size);
 
     string getName() const
     {   return name;};
@@ -29,9 +29,13 @@ public:
     int getSize() const
     {   return size;};
 
-    //ostream& operator << (ostream& out, const Song song);
+    //ostream& operator << (ostream& out, const Song &song);
+    bool operator==(const Song &rhsSong);
 
     ~Song();
 };
+
+ostream& operator << (ostream& out, const Song &song);
+
 
 #endif

@@ -14,6 +14,7 @@ You will want to do more complete testing.
 #include "Song.h"
 #include "UtPod.h"
 
+
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -22,6 +23,7 @@ int main(int argc, char *argv[])
 
     Song s1("Beatles", "Hey Jude1", 4);
     int result = t.addSong(s1);
+    //cout << s1 << endl;
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
@@ -33,6 +35,9 @@ int main(int argc, char *argv[])
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
     t.showSongList();
+
+    t.clearMemory();
+    cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
 
     Song s3("Beatles", "Hey Jude3", 6);
     result = t.addSong(s3);
@@ -78,7 +83,10 @@ int main(int argc, char *argv[])
     cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << "memory = " << t.getRemainingMemory() << endl;
+    cout << "remaining memory = " << t.getRemainingMemory() << endl;
 
+    t.clearMemory();
+    cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
     return 0;
 }
+
