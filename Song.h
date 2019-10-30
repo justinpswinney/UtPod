@@ -29,8 +29,9 @@ public:
     int getSize() const
     {   return size;};
 
-    //ostream& operator << (ostream& out, const Song &song);
     bool operator==(const Song &rhsSong);
+
+    bool operator>(const Song &rhsSong);
 
     ~Song();
 };

@@ -6,10 +6,18 @@
 using namespace std;
 
 int main1(int argc, char *argv[]){
-    Song s1("Toxic");
-    Song s2("How I Roll", "Brittany Spears", 20);
-    cout << "Song 1 is " << s1.getName() << " by " << s1.getArtist() << " and is " << s1.getSize() << "MB" << endl;
-    cout << "Song 2 is " << s2.getName() << " by " << s2.getArtist() << " and is " << s2.getSize() << "MB" << endl;
+    Song s1( "Brittany Spears", "Toxic",20);
+    Song s2("Brittany Spears", "Uoxic", 20);
+    Song s3( "Crittany Spears", "Toxic",20);
+    Song s4( "Brittany Spears", "Toxic",30);
+    Song s5( "Brittany Spears","Soxic", 20);
+    if(s1>s3){
+        cout << s1 << "is greater than" << s3 << endl;
+    }else{
+        if(s3>s1) {
+            cout << s3 << "is greater than" << s1 << endl;
+        }
+    }
 
     return 0;
 }

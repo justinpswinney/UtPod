@@ -39,6 +39,24 @@ bool Song::operator==(const Song &rhsSong){
     }
     return false;
 }
+
+bool Song::operator>(const Song &rhsSong){
+    if(this->getName()>rhsSong.getName()){
+        return true;
+    }
+    if(this->getName()==rhsSong.getName()){
+        if(this->getArtist()>rhsSong.getArtist()){
+            return true;
+        }
+        if(this->getArtist()==rhsSong.getArtist()){
+            if(this->getSize()>rhsSong.getSize()){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 ostream& operator << (ostream& out, const Song &song){
     out << song.getName() << " by " << song.getArtist() << " (" << song.getSize() << "MB)";
     return out;

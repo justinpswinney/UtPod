@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 {
     UtPod t(50);
 
-    Song s1("Beatles", "Hey Jude1", 4);
+    Song s1("Beatles", "Aey Jude1", 4);
     int result = t.addSong(s1);
     //cout << s1 << endl;
     cout << "result = " << result << endl;
@@ -29,36 +29,48 @@ int main(int argc, char *argv[])
     cout << "remaining memory = " << result << endl;
     t.showSongList();
 
-    Song s2("Beatles", "Hey Jude2", 5);
+    Song s2("Ceatles", "Bey Jude1", 5);
     result = t.addSong(s2);
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
     t.showSongList();
 
-    t.clearMemory();
-    cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
+    //t.clearMemory();
+    //cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
 
-    Song s3("Beatles", "Hey Jude3", 6);
+    Song s3("Beatles", "Cey Jude1", 1);
     result = t.addSong(s3);
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
 
-    Song s4("Beatles", "Hey Jude4", 7);
+    Song s4("Beatles", "Dey Jude1", 4);
     result = t.addSong(s4);
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
 
-    Song s5("Beatles", "Hey Jude5", 241);
+    Song s5("Beatles", "Eey Jude1", 1);
+    result = t.addSong(s5);
+    cout << "result = " << result << endl;
+    result = t.getRemainingMemory();
+    cout << "remaining memory = " << result << endl;
+/*
+    Song s5("Beatles", "Hey Jude6", 241);
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
-
+*/
     t.showSongList();
-
+    t.sortSongList();
+    cout << "\n" << endl;
+    t.showSongList();
+    cout << "\n" << endl;
+    t.shuffle();
+    t.showSongList();
+/*
     result = t.removeSong(s2);
     cout << "delete result = " << result << endl;
 
@@ -87,6 +99,7 @@ int main(int argc, char *argv[])
 
     t.clearMemory();
     cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
+*/
     return 0;
 }
 
