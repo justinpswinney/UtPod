@@ -6,23 +6,15 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Owner/CLionProjects/UtPod/Song.cpp
+Song.h
+C:/Users/Owner/CLionProjects/UtPod/Song.h
+iostream
+-
+
 C:/Users/Owner/CLionProjects/UtPod/Song.h
 string
 -
 iostream
 -
-
-C:/Users/Owner/CLionProjects/UtPod/UtPod.h
-Song.h
-C:/Users/Owner/CLionProjects/UtPod/Song.h
-
-C:/Users/Owner/CLionProjects/UtPod/UtPodDriver.cpp
-cstdlib
--
-iostream
--
-Song.h
-C:/Users/Owner/CLionProjects/UtPod/Song.h
-UtPod.h
-C:/Users/Owner/CLionProjects/UtPod/UtPod.h
 

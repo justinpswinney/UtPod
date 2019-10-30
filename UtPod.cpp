@@ -4,6 +4,8 @@
 #include "UtPod.h"
 #include <iostream>
 #include "time.h"
+#include <cstdlib>
+#include "Song.h"
 
 
     UtPod::UtPod(){
@@ -155,6 +157,6 @@
 
 
     UtPod::~UtPod() {
-
+    clearMemory();
     }
 

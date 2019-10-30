@@ -13,6 +13,8 @@ You will want to do more complete testing.
 #include <iostream>
 #include "Song.h"
 #include "UtPod.h"
+#include "time.h"
+
 
 
 using namespace std;
@@ -56,6 +58,30 @@ int main(int argc, char *argv[])
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
+
+    Song s6("Geatles", "Aey Jude1", 9);
+    result = t.addSong(s6);
+    cout << "result = " << result << endl;
+    result = t.getRemainingMemory();
+    cout << "remaining memory = " << result << endl;
+
+    Song s7("Geatles", "Aey Jude1", 1);
+    result = t.addSong(s7);
+    cout << "result = " << result << endl;
+    result = t.getRemainingMemory();
+    cout << "remaining memory = " << result << endl;
+
+    Song s8("Geatles", "Bey Jude1", 10);
+    result = t.addSong(s8);
+    cout << "result = " << result << endl;
+    result = t.getRemainingMemory();
+    cout << "remaining memory = " << result << endl;
+
+    Song s9("Geatles", "Bey Jude1", 15);
+    result = t.addSong(s9);
+    cout << "result = " << result << endl;
+    result = t.getRemainingMemory();
+    cout << "remaining memory = " << result << endl;
 /*
     Song s5("Beatles", "Hey Jude6", 241);
     result = t.addSong(s5);
@@ -70,6 +96,22 @@ int main(int argc, char *argv[])
     cout << "\n" << endl;
     t.shuffle();
     t.showSongList();
+    cout << "\n" << endl;
+    cout << "test remove" << endl;
+    t.removeSong(s9);
+    cout << "\n" << endl;
+    t.showSongList();
+
+    t.removeSong(s1);
+    cout << "\n" << endl;
+    t.showSongList();
+    cout << "\n" << endl;
+    t.sortSongList();
+    t.showSongList();
+    cout << "\n" << endl;
+    t.shuffle();
+    t.showSongList();
+
 /*
     result = t.removeSong(s2);
     cout << "delete result = " << result << endl;
