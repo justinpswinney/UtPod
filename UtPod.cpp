@@ -99,6 +99,10 @@
 
 
     void UtPod::sortSongList(){
+    if(songs==NULL){
+        return;
+    }
+
     SongNode *ptr=songs;
     SongNode *probe=songs->next;
     SongNode *smallest=songs->next;

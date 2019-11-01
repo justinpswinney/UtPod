@@ -24,22 +24,41 @@ int main(int argc, char *argv[])
     UtPod t(50);
 
     Song s1("Beatles", "Aey Jude1", 4);
-    int result = t.addSong(s1);
-    //cout << s1 << endl;
+
+    cout << "Test removing from empty library" << endl;
+    int result= t.removeSong(s1);
+    cout << "result = " << result << endl;
+    cout << "\nTest clearing an empty library" << endl;
+    t.clearMemory();
+    cout << "\nTest showing empty library" << endl;
+    t.showSongList();
+    cout << "\nTest sorting empty library" << endl;
+    t.sortSongList();
+    t.showSongList();
+    cout << "\nTest shuffling empty library" << endl;
+    t.shuffle();
+    t.showSongList();
+
+    cout << "\nTesting addSong" << endl;
+    result = t.addSong(s1);
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
     t.showSongList();
 
+    cout << "\nTest sorting single entry library" << endl;
+    t.sortSongList();
+    t.showSongList();
+    cout << "\nTest shuffling single entry library" << endl;
+    t.shuffle();
+    t.showSongList();
+    cout << "\nAdding 8 more songs- 9 total"  << endl;
     Song s2("Ceatles", "Bey Jude1", 5);
     result = t.addSong(s2);
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
     t.showSongList();
-
-    //t.clearMemory();
-    //cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
 
     Song s3("Beatles", "Cey Jude1", 1);
     result = t.addSong(s3);
@@ -82,66 +101,42 @@ int main(int argc, char *argv[])
     cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
-/*
-    Song s5("Beatles", "Hey Jude6", 241);
-    result = t.addSong(s5);
-    cout << "add result = " << result << endl;
+
+    t.showSongList();
+
+    cout << "\nTest adding song that is too large" << endl;
+    Song s10("Geatles", "Bey Jude1", 150);
+    result = t.addSong(s10);
+    cout << "result = " << result << endl;
     result = t.getRemainingMemory();
     cout << "remaining memory = " << result << endl;
-*/
+
     t.showSongList();
+    cout << "\nTest sorting the library" << endl;
     t.sortSongList();
-    cout << "\n" << endl;
     t.showSongList();
-    cout << "\n" << endl;
+    cout << "\nTest shuffling library twice to see variation" << endl;
     t.shuffle();
     t.showSongList();
-    cout << "\n" << endl;
-    cout << "test remove" << endl;
+    cout << endl;
+    t.shuffle();
+    t.showSongList();
+    cout << "\nTest remove twice" << endl;
     t.removeSong(s9);
-    cout << "\n" << endl;
     t.showSongList();
 
     t.removeSong(s1);
     cout << "\n" << endl;
     t.showSongList();
-    cout << "\n" << endl;
+
+    cout<< "\nTest sorting modified and shuffled library" << endl;
     t.sortSongList();
     t.showSongList();
-    cout << "\n" << endl;
-    t.shuffle();
-    t.showSongList();
 
-/*
-    result = t.removeSong(s2);
-    cout << "delete result = " << result << endl;
-
-    result = t.removeSong(s3);
-    cout << "delete result = " << result << endl;
-
-    t.showSongList();
-
-    result = t.removeSong(s1);
-    cout << "delete result = " << result << endl;
-
-    result = t.removeSong(s5);
-    cout << "delete result = " << result << endl;
-
-    result = t.removeSong(s4);
-    cout << "delete result = " << result << endl;
-
-
-    t.showSongList();
-
-    result = t.addSong(s5);
-    cout << "add result = " << result << endl;
-
-    t.showSongList();
-    cout << "remaining memory = " << t.getRemainingMemory() << endl;
-
+    cout << "\nTest clearing an in use library" << endl;
     t.clearMemory();
-    cout << "remaining memory after clear= " << t.getRemainingMemory() << endl;
-*/
+    t.showSongList();
+
     return 0;
 }
 
